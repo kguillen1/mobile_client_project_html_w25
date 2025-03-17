@@ -27,7 +27,7 @@ body {
 /* skip to main content */
 .skip {
     position: absolute;
-    top: -40px;
+    top: -50px;
     left: 0;
     background: #FFCB05;
     color: #00274C;
@@ -38,7 +38,7 @@ body {
 }
 
 .skip:focus {
-    top: 10px;
+    top: 20px;
 }
 
 /* header */
@@ -158,28 +158,78 @@ main ul li, main ol li {
 }
 
 
-/* the footer */
+/* designing the footer */
 footer {
-    grid-area: footer;
     background-color: #00274C;
-    color: white;
-    text-align: center;
-    padding: 20px;
+    padding: 40px 20px;
+    grid-area: footer;
+    display: grid;
+    justify-items: center;
 }
 
-footer a {
+/* making the columns */
+.footer-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    margin-bottom: 20px;
+    max-width: 1000px;
+    width: 100%;
+}
+/* styling quick links and contact */
+.footer-section {
+    background-color: #00274C;
+    color: #FFCB05;
+    border: 2px solid #FFCB05;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.footer-section h3 {
+    font-size: 1.5rem;
+    text-align: center;
+    margin-bottom: 15px;
+    color: #FFCB05;
+}
+
+/* the links */
+.footer-section a {
+    color: #FFCB05;
+    text-decoration: none;
+    font-size: 1.1rem;
+    display: block;
+    margin-bottom: 10px;
+}
+
+/* the hover */
+.footer-section a:hover {
+    background-color: #FFCB05;
+    color: #00274C;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* the style and design for the copyright and privacy part */
+.footer-bottom {
+    text-align: center;
+    font-size: 1rem;
+    color: #FFCB05;
+    padding-top: 20px;
+}
+
+.footer-bottom a {
     color: #FFCB05;
     text-decoration: none;
     font-weight: bold;
 }
 
-footer a:hover {
-    color: #75BCFF;
+.footer-bottom a:hover {
+    color: #00274C;
     text-decoration: underline;
-    border: 1px solid #75BCFF;
-    padding: 2px;
-    border-radius: 4px;
 }
+
+
 
 /* images */
 img{
